@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="M & A Landscape Services provides landscaping, cleanups, lawn maintenance, sod replacement, tree trimming, and pressure washing in Spanaway and King and Pierce counties.">
+<title>M & A Landscape Services | Spanaway Landscaping</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="scrollcraft.css">
+<style>
+:root {
+  --sc-canvas:#101813;
+  --sc-surface:#19241d;
+  --sc-ink:#f4f3e8;
+  --sc-ink-soft:#bdc8ba;
+  --sc-accent:#d9f24a;
+  --sc-accent-ink:#11170f;
+  --sc-font-display:"Arial Narrow","Avenir Next Condensed",system-ui,sans-serif;
+  --sc-font-text:"Avenir Next",system-ui,sans-serif;
+  --soil:#3c2f25;
+  --moss:#668354;
+  --paper:#f0efe4;
+  --line:50%;
+}
+*{box-sizing:border-box}
+html{background:var(--sc-canvas);scroll-behavior:smooth}
+body{margin:0;background:var(--sc-canvas);color:var(--sc-ink);font-family:var(--sc-font-text);overflow-x:hidden}
+a{color:inherit}
+.site-bar{position:fixed;inset:0 0 auto;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(18px,4vw,64px);mix-blend-mode:normal;background:linear-gradient(to bottom,rgba(16,24,19,.88),transparent);pointer-events:none}
+.mark,.nav-cta{pointer-events:auto}
+.mark{font:900 clamp(19px,2.1vw,31px)/.9 var(--sc-font-display);letter-spacing:-.05em;text-transform:uppercase;text-decoration:none}
+.mark span{display:block;font:650 9px/1.1 var(--sc-font-text);letter-spacing:.18em;color:var(--sc-accent);margin-top:7px}
+.nav-cta,.cta{display:inline-flex;min-height:48px;align-items:center;justify-content:center;padding:0 20px;border:1px solid color-mix(in srgb,var(--sc-accent) 70%,transparent);background:var(--sc-accent);color:var(--sc-accent-ink);font-weight:850;letter-spacing:.01em;text-decoration:none;border-radius:2px;transition:transform 150ms cubic-bezier(.23,1,.32,1),background 150ms ease-out}
+.nav-cta:hover,.cta:hover{transform:translateY(-2px)}
+.nav-cta:active,.cta:active{transform:translateY(1px)}
+:focus-visible{outline:3px solid var(--sc-accent);outline-offset:4px}
+
+.hero{height:430svh;position:relative;background:#0b120d}
+.hero-stage{position:sticky;top:0;height:100svh;overflow:hidden;isolation:isolate;background:#17241a}
+.hero-media,.hero-media img,.hero-after{position:absolute;inset:0;width:100%;height:100%}
+.hero-media img{object-fit:cover;max-width:none;filter:saturate(.9) contrast(1.05)}
+.hero-before{z-index:1;transform:scale(calc(1.05 + var(--hero-p,0)*.03));transform-origin:center}
+.hero-after{z-index:2;clip-path:inset(0 0 0 var(--line));overflow:hidden;will-change:clip-path}
+.hero-after img{transform:scale(calc(1.03 + var(--hero-p,0)*.018));filter:saturate(1.06) contrast(1.04)}
+.hero-foreground{position:absolute;z-index:7;inset:auto -5% -7%;height:34%;background:linear-gradient(170deg,transparent 0 38%,rgba(13,24,14,.86) 39% 55%,#0e1b11 56%);transform:translateY(calc(var(--hero-p,0)*36px));pointer-events:none}
+.hero-atmosphere{position:absolute;z-index:6;inset:0;background:radial-gradient(circle at 75% 15%,rgba(217,242,74,.1),transparent 27%),linear-gradient(90deg,rgba(8,15,10,.66),rgba(8,15,10,.1) 44%,rgba(8,15,10,.24));pointer-events:none}
+.property-line{position:absolute;z-index:12;top:0;bottom:0;left:0;width:2px;background:var(--sc-accent);box-shadow:0 0 0 1px rgba(10,18,11,.2);transform:translateX(var(--line-x,50vw));will-change:transform}
+.property-line:before{content:"PROPERTY LINE";position:absolute;top:clamp(110px,18vh,190px);left:0;transform:translateX(-50%) rotate(-90deg);transform-origin:center;background:var(--sc-accent);color:var(--sc-accent-ink);font:900 10px/1 var(--sc-font-text);letter-spacing:.18em;padding:9px 12px;white-space:nowrap}
+.property-line:after{content:"";position:absolute;inset:0 auto 0 -10px;width:22px;background:repeating-linear-gradient(to bottom,transparent 0 18px,rgba(217,242,74,.28) 18px 22px);opacity:.8}
+.hero-copy{position:absolute;z-index:15;left:clamp(20px,6vw,92px);bottom:clamp(54px,9vh,112px);max-width:min(690px,82vw);text-shadow:0 2px 24px rgba(0,0,0,.5)}
+.hero-copy h1{font:950 clamp(3.1rem,7.3vw,8.2rem)/.83 var(--sc-font-display);letter-spacing:-.065em;text-transform:uppercase;margin:0;text-wrap:balance;max-width:9ch}
+.hero-copy h1 span{display:block;color:var(--sc-accent)}
+.hero-copy p{max-width:540px;font-size:clamp(1rem,1.6vw,1.25rem);line-height:1.55;color:#eef3e9;margin:22px 0 26px}
+.hero-status{display:flex;gap:12px;align-items:center;font-size:.78rem;font-weight:750;letter-spacing:.1em;text-transform:uppercase;color:#eef3e9}
+.hero-status i{width:32px;height:2px;background:var(--sc-accent);display:block}
+
+.needs{background:var(--paper);color:#172018;padding:clamp(92px,13vw,180px) clamp(20px,6vw,96px)}
+.needs-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(260px,.7fr);gap:clamp(36px,8vw,140px);align-items:end;max-width:1440px;margin:auto}
+.needs h2,.proof h2,.contact h2{font:950 clamp(3.1rem,7vw,7.8rem)/.84 var(--sc-font-display);letter-spacing:-.06em;text-transform:uppercase;margin:0;text-wrap:balance}
+.needs-intro{font-size:clamp(1.05rem,1.6vw,1.25rem);line-height:1.65;max-width:36ch;margin:0;color:#455148}
+.service-ledger{max-width:1440px;margin:72px auto 0;border-top:1px solid #aeb9ac}
+.service-row{display:grid;grid-template-columns:1.15fr 1.6fr auto;gap:22px;align-items:center;padding:25px 0;border-bottom:1px solid #aeb9ac;position:relative}
+.service-row h3{font:850 clamp(1.35rem,2.5vw,2.6rem)/1 var(--sc-font-display);letter-spacing:-.035em;text-transform:uppercase;margin:0}
+.service-row p{margin:0;color:#566159;line-height:1.5}
+.service-row b{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;color:#49603e}
+
+.video-proof{position:relative;min-height:92svh;background:#101813;display:grid;place-items:center;overflow:hidden}
+.video-proof video,.video-proof .video-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.72}
+.video-proof:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,18,13,.92) 0 35%,rgba(11,18,13,.16) 65%),linear-gradient(to top,rgba(11,18,13,.55),transparent 45%)}
+.video-copy{position:relative;z-index:2;width:min(1380px,88vw);margin:auto}
+.video-copy h2{font:950 clamp(3.2rem,8vw,9rem)/.84 var(--sc-font-display);max-width:8ch;letter-spacing:-.065em;text-transform:uppercase;margin:0 0 24px}
+.video-copy p{font-size:clamp(1rem,1.6vw,1.25rem);line-height:1.6;max-width:39ch;color:#dce5d9}
+
+.proof{background:#0f1712;padding:clamp(94px,12vw,170px) 0;color:var(--sc-ink)}
+.proof-head{padding:0 clamp(20px,6vw,96px);display:flex;justify-content:space-between;align-items:end;gap:30px}
+.proof-head p{max-width:42ch;color:var(--sc-ink-soft);line-height:1.6;margin:0}
+.project-rail{display:flex;gap:22px;padding:60px clamp(20px,6vw,96px) 32px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:var(--sc-accent) #1c281f}
+.project{flex:0 0 min(72vw,720px);scroll-snap-align:start;margin:0}
+.project-media{height:min(64vw,610px);background:#263326;overflow:hidden;position:relative}
+.project img{width:100%;height:100%;object-fit:cover;transition:transform 240ms cubic-bezier(.23,1,.32,1)}
+.project:hover img{transform:scale(1.018)}
+.project figcaption{display:flex;justify-content:space-between;gap:20px;padding:18px 0 0;font-size:.87rem;line-height:1.4;color:var(--sc-ink-soft)}
+.project strong{color:var(--sc-ink);text-transform:uppercase;letter-spacing:.08em}
+
+.trust{background:var(--sc-accent);color:var(--sc-accent-ink);padding:clamp(78px,11vw,150px) clamp(20px,6vw,96px)}
+.trust-inner{max-width:1440px;margin:auto;display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(40px,10vw,160px);align-items:start}
+.trust-kicker{font:950 clamp(5rem,15vw,15rem)/.72 var(--sc-font-display);letter-spacing:-.08em}
+.trust-kicker span{display:block;font:850 .78rem/1.2 var(--sc-font-text);letter-spacing:.16em;text-transform:uppercase;margin-top:25px}
+.trust-copy h2{font:950 clamp(2.5rem,5vw,5.6rem)/.9 var(--sc-font-display);letter-spacing:-.055em;text-transform:uppercase;margin:0 0 24px}
+.trust-copy p{font-size:clamp(1.05rem,1.7vw,1.3rem);line-height:1.65;max-width:48ch}
+
+.contact{min-height:96svh;display:grid;align-items:center;position:relative;padding:100px clamp(20px,6vw,96px);background:#0c130e;overflow:hidden}
+.contact:before{content:"";position:absolute;left:0;right:0;top:64%;height:2px;background:var(--sc-accent);transform-origin:left;transform:scaleX(var(--close-line,0));transition:transform .1s linear}
+.contact-inner{position:relative;z-index:2;max-width:1440px;width:100%;margin:auto}
+.contact h2{max-width:11ch;margin-bottom:36px}
+.contact h2 span{color:var(--sc-accent)}
+.contact-actions{display:flex;gap:15px;flex-wrap:wrap;align-items:center}
+.contact-link{color:var(--sc-ink);text-underline-offset:6px;font-weight:700;padding:12px}
+.contact-meta{margin-top:64px;display:flex;gap:24px;flex-wrap:wrap;color:var(--sc-ink-soft);font-size:.9rem}
+
+@media(max-width:760px){
+ .site-bar{padding:14px 16px}.nav-cta{min-height:44px;padding:0 13px;font-size:.82rem}.mark{font-size:18px}.mark span{display:none}
+ .hero{height:360svh}.hero-copy{left:18px;right:18px;bottom:52px;max-width:none}.hero-copy h1{font-size:clamp(3.15rem,16vw,5.4rem);max-width:7ch}.hero-copy p{max-width:30ch;font-size:.98rem}
+ .property-line:before{top:120px;font-size:8px}.hero-foreground{height:24%}
+ .needs-head,.trust-inner{grid-template-columns:1fr}.needs h2,.proof h2,.contact h2{font-size:clamp(3.2rem,14vw,5.7rem)}
+ .service-row{grid-template-columns:1fr auto}.service-row p{grid-column:1/-1;max-width:36ch}
+ .video-proof{min-height:82svh}.video-copy h2{font-size:clamp(3.4rem,15vw,6.4rem)}
+ .proof-head{display:block}.proof-head p{margin-top:24px}.project{flex-basis:84vw}.project-media{height:108vw;max-height:640px}
+ .trust-kicker{font-size:34vw}.contact-actions{align-items:stretch;flex-direction:column}.cta,.contact-link{width:100%;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}.hero{height:auto}.hero-stage{position:relative;min-height:100svh}.hero-after{clip-path:inset(0 0 0 40%)}.property-line{transform:translateX(40vw)}.hero-before,.hero-after img,.hero-foreground{transform:none}.project img,.nav-cta,.cta{transition:none}.video-proof video{display:none}
+}
+</style>
+</head>
+<body>
+<span data-sc-progress></span>
+<div class="sc-grain" aria-hidden="true"></div>
+<header class="site-bar">
+  <a class="mark" href="#top" aria-label="M and A Landscape Services home">M&amp;A <span>Landscape Services</span></a>
+  <a class="nav-cta" href="tel:+12533632877">Request an Estimate</a>
+</header>
+<main id="top">
+  <section class="hero" id="transformation" data-sc-verify-state="split:50">
+    <div class="hero-stage">
+      <div class="hero-media hero-before" aria-hidden="true"><img src="assets/sod-before.webp" alt=""></div>
+      <div class="hero-media hero-after" aria-hidden="true"><img src="assets/sod-after.webp" alt=""></div>
+      <div class="hero-atmosphere" aria-hidden="true"></div>
+      <div class="hero-foreground" aria-hidden="true"></div>
+      <div class="property-line" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <div class="hero-status"><i></i><span>Spanaway, King &amp; Pierce Counties</span></div>
+        <h1>Your yard. <span>Cared for.</span></h1>
+        <p>Landscaping, cleanups, lawn maintenance, sod replacement, tree trimming, and pressure washing.</p>
+        <a class="cta" href="tel:+12533632877">Request an Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="needs" data-sc-act="flow">
+    <div class="needs-head" data-sc-in data-sc-stagger="60">
+      <h2>Start with what the property needs.</h2>
+      <p class="needs-intro">A one-time cleanup, ongoing care, or a focused repair. The work begins with the condition of your exterior, not a one-size package.</p>
+    </div>
+    <div class="service-ledger" data-sc-in data-sc-stagger="45">
+      <article class="service-row"><h3>Cleanups</h3><p>Reset overgrown or neglected exterior areas and prepare the property for regular care.</p><b>One-time</b></article>
+      <article class="service-row"><h3>Lawn Care</h3><p>Mowing, edging, maintenance, and sod replacement for a cleaner, more complete yard.</p><b>Recurring</b></article>
+      <article class="service-row"><h3>Trees &amp; Grounds</h3><p>Tree trimming and practical landscape work shaped around the property.</p><b>Exterior</b></article>
+      <article class="service-row"><h3>Pressure Washing</h3><p>Refresh hard surfaces so the cared-for result extends beyond the lawn.</p><b>Finish</b></article>
+    </div>
+  </section>
+
+  <section class="video-proof" data-sc-act="flow">
+    <img class="video-poster" src="assets/video-poster.webp" alt="A completed M and A Landscape Services outdoor project">
+    <video muted playsinline loop autoplay poster="assets/video-poster.webp"><source src="assets/cleanup-video.mp4" type="video/mp4"></video>
+    <div class="video-copy" data-sc-in data-sc-stagger="70">
+      <h2>Real work. Visible change.</h2>
+      <p>The project footage and photographs on this page come from M &amp; A Landscape Services. The work is the proof.</p>
+    </div>
+  </section>
+
+  <section class="proof" data-sc-act="flow">
+    <div class="proof-head" data-sc-in data-sc-stagger="60">
+      <h2>Work you can inspect.</h2>
+      <p>Each image is retained from the existing business page. No stock yards, invented testimonials, or substitute projects.</p>
+    </div>
+    <div class="project-rail" aria-label="Project gallery">
+      <figure class="project"><div class="project-media" data-sc-reveal="left"><img src="assets/mow-edge.webp" alt="Auburn lawn after mowing and edging"></div><figcaption><strong>Lawn</strong><span>Maintenance and finish work</span></figcaption></figure>
+      <figure class="project"><div class="project-media" data-sc-reveal="up"><img src="assets/cleanup.webp" alt="Side yard after landscape cleanup"></div><figcaption><strong>Cleanup</strong><span>Exterior reset and care</span></figcaption></figure>
+      <figure class="project"><div class="project-media" data-sc-reveal="right"><img src="assets/wall.webp" alt="Landscaped retaining wall and steps"></div><figcaption><strong>Landscape</strong><span>Practical property improvements</span></figcaption></figure>
+      <figure class="project"><div class="project-media" data-sc-reveal="iris"><img src="assets/pressure.webp" alt="Patio after pressure washing"></div><figcaption><strong>Finish</strong><span>Complete exterior presentation</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="trust" data-sc-act="flow">
+    <div class="trust-inner" data-sc-in data-sc-stagger="70">
+      <div class="trust-kicker">9<span>Years in business</span></div>
+      <div class="trust-copy"><h2>Local service. Direct contact.</h2><p>M &amp; A Landscape Services serves Spanaway and the wider King and Pierce County area. Call or email to discuss the property and request an estimate.</p></div>
+    </div>
+  </section>
+
+  <section class="contact" id="estimate" data-sc-act="flow" data-sc-verify-state="close:0">
+    <div class="contact-inner" data-sc-in data-sc-stagger="80">
+      <h2>Bring the <span>finished side</span> into view.</h2>
+      <div class="contact-actions"><a class="cta" href="tel:+12533632877">Call (253) 363-2877</a><a class="contact-link" href="mailto:malandscapeservices@gmail.com?subject=Estimate%20Request">malandscapeservices@gmail.com</a></div>
+      <div class="contact-meta"><span>Spanaway, Washington</span><span>King &amp; Pierce Counties</span><span>Landscaping · Maintenance · Cleanup</span></div>
+    </div>
+  </section>
+</main>
+<script src="scrollcraft.js"></script>
+<script>
+ScrollCraft.mount(document.body);
+(() => {
+  const hero = document.querySelector('.hero');
+  const root = document.documentElement;
+  const close = document.querySelector('.contact');
+  let ticking = false;
+  const clamp = (n,min,max) => Math.max(min,Math.min(max,n));
+  function paint(){
+    const r = hero.getBoundingClientRect();
+    const travel = Math.max(1, hero.offsetHeight - innerHeight);
+    const p = clamp(-r.top / travel, 0, 1);
+    const eased = 1 - Math.pow(1-p, 2.2);
+    const startLine = innerWidth < 760 ? 84 : 50;
+    const line = startLine - eased * startLine;
+    root.style.setProperty('--line', line.toFixed(2) + '%');
+    root.style.setProperty('--line-x', (innerWidth * line / 100).toFixed(1) + 'px');
+    root.style.setProperty('--hero-p', p.toFixed(4));
+    hero.dataset.scVerifyState = 'split:' + Math.round(line);
+    const cr = close.getBoundingClientRect();
+    const cp = clamp(1 - (cr.top - innerHeight*.35)/(innerHeight*.65), 0, 1);
+    root.style.setProperty('--close-line', cp.toFixed(3));
+    close.dataset.scVerifyState = 'close:' + Math.round(cp*100);
+    ticking = false;
+  }
+  function request(){if(!ticking){ticking=true;requestAnimationFrame(paint)}}
+  addEventListener('scroll',request,{passive:true});addEventListener('resize',request);paint();
+})();
+</script>
+</body>
+</html>
